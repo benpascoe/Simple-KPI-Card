@@ -1,0 +1,124 @@
+body {
+    font-family: Roboto;
+}
+
+code {
+    background-color: #fdf6e3;
+    color: #586e75;
+}
+
+.currentKpiValue {
+    font-size: 28px;
+}
+
+.comparisonMetricDiv {
+    padding-top: 5px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+/* .comparisonMetricName {
+    font-size: 14px;
+}
+
+.comparisonMetricValue {
+    font-size: 14px;
+}
+
+.comparisonMetricDiff {
+    font-size: 14px;
+}
+
+.comparisonMetricVar {
+    font-size: 14px;
+} */
+
+#container {
+    padding-top: 8p;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#kpiTitle {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.increase {
+    color: green;
+}
+
+.decrease {
+    color: red;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {}
+
+.help-tip {
+    position: absolute;
+    top: 5px;
+    right: 18px;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 5px;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+}
+
+.help-tip:before {
+    content: 'â“˜';
+    color: #000;
+}
+
+.help-tip:hover span {
+    display: block;
+    transform-origin: 100% 0%;
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.help-tip span {
+    display: none;
+    text-align: left;
+    background-color: #FFF;
+    padding: 5px;
+    /* width: 100px;
+    left: -100px; */
+    top: 20px;
+    overflow: auto;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: #000;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+/* .help-tip span:before {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-bottom-color: #1E2021;
+    left: 10px;
+    top: -12px;
+} */
+
+.help-tip span:after {
+    width: 100%;
+    height: 40px;
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 0;
+}
