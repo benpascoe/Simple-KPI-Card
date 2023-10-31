@@ -1,0 +1,526 @@
+{
+    "data": [{
+        "id": "concepts",
+        "label": "KPI Card Values",
+        "elements": [{
+                "id": "currentMetric",
+                "label": "Current metric",
+                "type": "METRIC",
+                "options": {
+                    "min": 1,
+                    "max": 1
+                }
+            },
+            {
+                "id": "comparisonMetric",
+                "label": "Comparison metric(s)",
+                "type": "METRIC",
+                "options": {
+                    "min": 0,
+                    "max": 50
+                }
+            },
+            {
+                "id": "titleMetric",
+                "label": "Optional title metric",
+                "type": "METRIC",
+                "options": {
+                    "min": 0,
+                    "max": 1
+                }
+            }
+        ]
+    }],
+    "style": [{
+        "id": "primaryMetric",
+        "label": "Primary Metric",
+        "elements": [{
+            "type": "CHECKBOX",
+            "id": "compactNumbers",
+            "label": "Compact numbers",
+            "defaultValue": false
+        }, {
+            "type": "SELECT_SINGLE",
+            "id": "decimalPrecisionVariance",
+            "label": "Decimal precision for percentage change",
+            "options": [{
+                "label": "auto",
+                "value": "auto"
+            }, {
+                "label": "0",
+                "value": "0"
+            }, {
+                "label": "1",
+                "value": "1"
+            }, {
+                "label": "2",
+                "value": "2"
+            }, {
+                "label": "3",
+                "value": "3"
+            }, {
+                "label": "4",
+                "value": "4"
+            }, {
+                "label": "5",
+                "value": "5"
+            }, {
+                "label": "6",
+                "value": "6"
+            }, {
+                "label": "7",
+                "value": "7"
+            }, {
+                "label": "8",
+                "value": "8"
+            }],
+            "defaultValue": "auto"
+        }, {
+            "type": "SELECT_SINGLE",
+            "id": "decimalPrecision",
+            "label": "Decimal precision for other values",
+            "options": [{
+                "label": "auto",
+                "value": "auto"
+            }, {
+                "label": "0",
+                "value": "0"
+            }, {
+                "label": "1",
+                "value": "1"
+            }, {
+                "label": "2",
+                "value": "2"
+            }, {
+                "label": "3",
+                "value": "3"
+            }, {
+                "label": "4",
+                "value": "4"
+            }, {
+                "label": "5",
+                "value": "5"
+            }, {
+                "label": "6",
+                "value": "6"
+            }, {
+                "label": "7",
+                "value": "7"
+            }, {
+                "label": "8",
+                "value": "8"
+            }],
+            "defaultValue": "auto"
+        }, {
+            "type": "TEXTINPUT",
+            "id": "hyperlink",
+            "label": "Title hyperlink (must open in new tab)",
+            "defaultValue": ""
+        }, {
+            "type": "CHECKBOX",
+            "id": "percentMetric",
+            "label": "My metric is a percentage",
+            "defaultValue": false
+        }, {
+            "type": "TEXTINPUT",
+            "id": "prefix",
+            "label": "Metric prefix (e.g. £)",
+            "defaultValue": ""
+        }]
+    }, {
+        "id": "missingDataSection",
+        "label": "Missing Data",
+        "elements": [{
+            "type": "SELECT_SINGLE",
+            "id": "missingData",
+            "label": "Missing Data",
+            "options": [{
+                "label": "Show \"No data\"",
+                "value": "No data"
+            }, {
+                "label": "Show \"0\"",
+                "value": "0"
+            }, {
+                "label": "Show \"-\"",
+                "value": "-"
+            }, {
+                "label": "Show \"null\"",
+                "value": "null"
+            }, {
+                "label": "Show \" \" (blank)",
+                "value": " "
+            }],
+            "defaultValue": "No data"
+        }]
+    }, {
+        "id": "kpiCard",
+        "label": "Labels",
+        "elements": [{
+                "type": "CHECKBOX",
+                "id": "titleVisibility",
+                "label": "Show title",
+                "defaultValue": true
+            }, {
+                "type": "CHECKBOX",
+                "id": "currentMetricVisibility",
+                "label": "Show current metric",
+                "defaultValue": true
+            }, {
+                "type": "FONT_COLOR",
+                "id": "titleColor",
+                "label": "Title colour",
+                "defaultValue": "#6A6C6E"
+            }, {
+                "type": "FONT_FAMILY",
+                "id": "titleFont",
+                "label": "Font",
+                "defaultValue": "Roboto"
+            }, {
+                "type": "FONT_SIZE",
+                "id": "titleSize",
+                "label": "Title size",
+                "defaultValue": 14
+            }, {
+                "type": "FONT_COLOR",
+                "id": "currentMetricColor",
+                "label": "Current metric colour",
+                "defaultValue": "#000"
+            }, {
+                "type": "CHECKBOX",
+                "id": "currentMetricNameVisibility",
+                "label": "Show metric name",
+                "defaultValue": true
+            }, {
+                "type": "SELECT_SINGLE",
+                "id": "titleAlign",
+                "label": "Align metric name",
+                "options": [{
+                    "label": "Left",
+                    "value": "left"
+                }, {
+                    "label": "Centre",
+                    "value": "center"
+                }, {
+                    "label": "Right",
+                    "value": "right"
+                }],
+                "defaultValue": "left"
+            }, {
+                "type": "SELECT_SINGLE",
+                "id": "valueAlign",
+                "label": "Align metric value",
+                "options": [{
+                    "label": "Left",
+                    "value": "left"
+                }, {
+                    "label": "Centre",
+                    "value": "center"
+                }, {
+                    "label": "Right",
+                    "value": "right"
+                }],
+                "defaultValue": "left"
+            }, {
+                "type": "SELECT_SINGLE",
+                "id": "comparisonAlign",
+                "label": "Align comparison",
+                "options": [{
+                    "label": "Left",
+                    "value": "left"
+                }, {
+                    "label": "Centre",
+                    "value": "center"
+                }, {
+                    "label": "Right",
+                    "value": "right"
+                }],
+                "defaultValue": "left"
+            }, {
+                "type": "FONT_SIZE",
+                "id": "currentMetricSize",
+                "label": "Current metric size",
+                "defaultValue": 28
+            }, {
+                "type": "FONT_SIZE",
+                "id": "comparisonMetricSize",
+                "label": "Comparison text size",
+                "defaultValue": 14
+            }, {
+                "type": "FONT_SIZE",
+                "id": "comparisonMetricLineHeight",
+                "label": "Comparison line height",
+                "defaultValue": 18
+            }, {
+                "type": "CHECKBOX",
+                "id": "comparisonMetricNameVisibility",
+                "label": "Show comparison metric name",
+                "defaultValue": true
+            }, {
+                "type": "CHECKBOX",
+                "id": "comparisonMetricVisibility",
+                "label": "Show comparison metric",
+                "defaultValue": true
+            }, {
+                "type": "SELECT_RADIO",
+                "id": "varianceOptions",
+                "label": "Variance options",
+                "options": [{
+                    "label": "Show absolute change only",
+                    "value": "absoluteOnly"
+                }, {
+                    "label": "Show percentage change only",
+                    "value": "percentOnly"
+                }, {
+                    "label": "Show both absolute and percentage change",
+                    "value": "both"
+                }, {
+                    "label": "Show neither Absolute nor Percentage Change",
+                    "value": "none"
+                }],
+                "defaultValue": "both"
+            }, {
+                "type": "TEXTINPUT",
+                "id": "nameValueSeparator",
+                "label": "Name/values separator",
+                "defaultValue": ": "
+            }, {
+                "type": "TEXTINPUT",
+                "id": "separator",
+                "label": "Absolute/percentage separator",
+                "defaultValue": " "
+            },
+            {
+                "type": "INTERVAL",
+                "id": "middleMax",
+                "label": "Upper limit (%) for middle colour",
+                "options": [{
+                    "max": 100,
+                    "min": -100
+                }],
+                "defaultValue": 0
+            },
+            {
+                "type": "INTERVAL",
+                "id": "middleMin",
+                "label": "Lower limit (%) for middle colour",
+                "options": [{
+                    "max": 100,
+                    "min": -100
+                }],
+                "defaultValue": -5
+            },
+            {
+                "type": "CHECKBOX",
+                "id": "iconVisibility",
+                "label": "Show icons",
+                "defaultValue": true
+            },
+            {
+                "type": "TEXTINPUT",
+                "id": "iconIncrease",
+                "label": "Increase icon/prefix",
+                "defaultValue": "▲"
+            },
+            {
+                "type": "FONT_COLOR",
+                "id": "increaseColor",
+                "label": "Increase colour",
+                "defaultValue": "#008000"
+            },
+            {
+                "type": "TEXTINPUT",
+                "id": "iconMiddle",
+                "label": "Middle icon/prefix",
+                "defaultValue": "◼"
+            },
+            {
+                "type": "FONT_COLOR",
+                "id": "middleColor",
+                "label": "Middle colour",
+                "defaultValue": "#FFA500"
+            },
+            {
+                "type": "TEXTINPUT",
+                "id": "iconDecrease",
+                "label": "Decrease icon/prefix",
+                "defaultValue": "▼"
+            },
+            {
+                "type": "FONT_COLOR",
+                "id": "decreaseColor",
+                "label": "Decrease colour",
+                "defaultValue": "#FF0000"
+            }
+        ]
+    }, {
+        "id": "padding",
+        "label": "Padding",
+        "elements": [{
+            "type": "SELECT_SINGLE",
+            "id": "leftPadding",
+            "label": "Left",
+            "options": [{
+                "label": "0px",
+                "value": "0px"
+            }, {
+                "label": "4px",
+                "value": "4px"
+            }, {
+                "label": "5px",
+                "value": "5px"
+            }, {
+                "label": "8px",
+                "value": "8px"
+            }, {
+                "label": "10px",
+                "value": "10px"
+            }, {
+                "label": "10px",
+                "value": "10px"
+            }, {
+                "label": "16px",
+                "value": "16px"
+            }, {
+                "label": "24px",
+                "value": "24px"
+            }, {
+                "label": "32px",
+                "value": "32px"
+            }, {
+                "label": "36px",
+                "value": "36px"
+            }, {
+                "label": "48px",
+                "value": "48px"
+            }, {
+                "label": "72px",
+                "value": "72px"
+            }, {
+                "label": "96px",
+                "value": "96px"
+            }],
+            "defaultValue": "24px"
+        }, {
+            "type": "SELECT_SINGLE",
+            "id": "rightPadding",
+            "label": "Right",
+            "options": [{
+                "label": "0px",
+                "value": "0px"
+            }, {
+                "label": "4px",
+                "value": "4px"
+            }, {
+                "label": "5px",
+                "value": "5px"
+            }, {
+                "label": "8px",
+                "value": "8px"
+            }, {
+                "label": "10px",
+                "value": "10px"
+            }, {
+                "label": "10px",
+                "value": "10px"
+            }, {
+                "label": "16px",
+                "value": "16px"
+            }, {
+                "label": "24px",
+                "value": "24px"
+            }, {
+                "label": "32px",
+                "value": "32px"
+            }, {
+                "label": "36px",
+                "value": "36px"
+            }, {
+                "label": "48px",
+                "value": "48px"
+            }, {
+                "label": "72px",
+                "value": "72px"
+            }, {
+                "label": "96px",
+                "value": "96px"
+            }],
+            "defaultValue": "24px"
+        }, {
+            "type": "SELECT_SINGLE",
+            "id": "topPadding",
+            "label": "Top",
+            "options": [{
+                "label": "0px",
+                "value": "0px"
+            }, {
+                "label": "4px",
+                "value": "4px"
+            }, {
+                "label": "5px",
+                "value": "5px"
+            }, {
+                "label": "8px",
+                "value": "8px"
+            }, {
+                "label": "10px",
+                "value": "10px"
+            }, {
+                "label": "10px",
+                "value": "10px"
+            }, {
+                "label": "16px",
+                "value": "16px"
+            }, {
+                "label": "24px",
+                "value": "24px"
+            }, {
+                "label": "32px",
+                "value": "32px"
+            }, {
+                "label": "36px",
+                "value": "36px"
+            }, {
+                "label": "48px",
+                "value": "48px"
+            }, {
+                "label": "72px",
+                "value": "72px"
+            }, {
+                "label": "96px",
+                "value": "96px"
+            }],
+            "defaultValue": "8px"
+        }]
+    }, {
+        "id": "textModeSection",
+        "label": "Text Mode",
+        "elements": [{
+            "type": "CHECKBOX",
+            "id": "textModeVisibility",
+            "label": "Show text mode",
+            "defaultValue": false
+        }, {
+            "type": "TEXTAREA",
+            "id": "textMode",
+            "label": "Text Mode",
+            "defaultValue": "<p>1: {currentMetric} </p>\n<p>2: {absoluteDifference} </p>\n<p>3: {percentDifference} </p>\n<p>4: {separator} </p>\n<p>5: {nameValueSeparator} </p>\n<p>6: {iconPrefix} < /p>\n<p>7: {comparisonMetricName} </p>\n<p>8: {comparisonMetric} </p>\n<p>9: {currentMetricName} </p>"
+        }]
+    }, {
+        "id": "infoSection",
+        "label": "Information",
+        "elements": [{
+            "type": "CHECKBOX",
+            "id": "infoVisibility",
+            "label": "Show information icon",
+            "defaultValue": false
+        }, {
+            "type": "TEXTAREA",
+            "id": "infoText",
+            "label": "Information text",
+            "defaultValue": "<p>Add your information text here</p>\n<p>html code is allowed, the pop up will scroll if necessary</p>"
+        }]
+    }],
+    "features": {
+        "enableComparisonDateRange": true
+    }
+}
