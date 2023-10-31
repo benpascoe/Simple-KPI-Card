@@ -1,0 +1,23 @@
+{
+    "name": "Simple KPI Card",
+    "organization": "Ben Pascoe",
+    "description": "Show a metric and compare it to up to 50 other metrics",
+    "logoUrl": "https://storage.googleapis.com/looker_studio_dev_2/Simple_KPI_card.png",
+    "supportUrl": "",
+    "privacyPolicyUrl": "",
+    "termsOfServiceUrl": "",
+    "packageUrl": "",
+    "organizationUrl": "https://benpascoe.co.uk",
+    "devMode": true,
+    "components": [{
+        "id": "kpiCard",
+        "name": "Simple KPI Card (Dev)",
+        "description": "Show a metric and compare it to up to 50 other metrics",
+        "iconUrl": "https://storage.googleapis.com/looker_studio_dev_2/Simple_KPI_card.png",
+        "resource": {
+            "js": "gs://looker_studio_dev/index.js",
+            "config": "gs://looker_studio_dev/index.json",
+            "css": "gs://looker_studio_dev/index.css"
+        }
+    }]
+}
